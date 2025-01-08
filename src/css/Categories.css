@@ -1,0 +1,234 @@
+.categories {
+  margin: 20px 0;
+
+}
+
+.category {
+  margin-bottom: 40px;
+  gap: 20px;
+  height: auto; /* Cambia de un tamaño fijo a automático */
+  min-height: 500px; /* Opcional para asegurar un mínimo */
+  
+}
+
+.categorias {
+  display: flex;
+  align-items: center; /* Alinea verticalmente al centro */
+  justify-content: start; /* Alinea horizontalmente al centro */
+  text-align: center; /* Asegura que el texto se centre dentro del h2 */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+
+.video-list{
+  padding: 40px;
+}
+
+
+
+
+.frontend-card {
+  box-shadow: 0px 8px 14px rgba(107, 209, 255, 0.6) !important;
+}
+
+.backend-card {
+  box-shadow: 0px 8px 14px rgba(0, 200, 111, 0.6) !important;
+}
+
+.innovacion-card {
+  box-shadow: 0px 8px 14px rgba(255, 186, 5, 0.6) !important;
+}
+
+/* Clases para cada categoría con !important */
+.frontend {
+  background-color: #6BD1FF !important;
+  border-radius: 15px;
+  margin-left: 10px;
+  padding: 20px;
+  width: 300px;
+  font-size: 20PX;
+}
+
+.backend {
+  background-color: #00C86F !important;
+  border-radius: 15px;
+  margin-left:20px;
+  padding: 20px;
+  width: 300px;
+  font-size: 20PX;
+}
+
+.innovacion {
+  background-color: #FFBA05 !important;
+  border-radius: 15px;
+  margin-left: 20px;
+  padding: 20px;
+  width: 300px;
+  font-size: 20PX;
+}
+
+
+/* Hover de cada categoría */
+.frontend:hover {
+  background-color: #00C86F;
+  color: white;
+}
+
+.backend:hover {
+  background-color: #6BD1FF;
+  color: white;
+}
+
+.innovacion:hover {
+  background-color: #FFBA05;
+  color: white;
+
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto; /* Cambia esto a auto para permitir un scroll horizontal */
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+
+.carousel-btn {
+  background-color: #021d47;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #6bd1ff;
+}
+
+.video-list {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  flex-wrap: nowrap; /* Asegura que los videos no se envuelvan a una nueva línea */
+}
+.video-card {
+  width: 280px;
+  max-width: 100%;
+  background-color: #021d47;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #6bd1ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Previene que el contenido sobresalga */
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  justify-content: space-between; /* Empuja el footer al fondo */
+  height: auto; /* Asegura que las tarjetas tengan la misma altura */
+}
+
+.video-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px #ffffff;
+}
+
+.video-info h3 {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.video-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  background-color: #000;
+  padding: 5px;
+}
+
+.video-footer button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.video-footer button:hover {
+  background-color: #ffffff;
+  color: #021d47;
+}
+
+.video-footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem; /* Tamaño de los íconos */
+  color: #ffffff; /* Color del ícono */
+  margin: 0 10px; /* Espaciado entre los botones */
+}
+
+
+@media (max-width: 768px) {
+  .video-card {
+    width: 90%;
+  }
+  .video-list {
+    gap: 10px;
+  }
+  .carousel-btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsividad: */
+@media (max-width: 768px) {
+  .category h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .video-card {
+    margin-bottom: 20px;
+    max-width: 90%; /* Ajusta el tamaño de las imágenes para pantallas más pequeñas */
+
+  }
+
+  .video-footer button {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-list {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .video-card {
+    width: 90%; /* Hacemos las tarjetas más grandes */
+    height: 180px; /* Reducimos aún más la altura */
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+  }
+
+  .video-footer button {
+    font-size: 0.8rem; /* Reducimos el tamaño de los íconos */
+  }
+}

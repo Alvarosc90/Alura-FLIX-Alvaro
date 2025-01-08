@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #262626;
+  padding: 10px 20px;
+  width: 100vw;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px; /* Tamaño consistente */
+  height: 54px; /* Tamaño consistente */
+  color: white;
+  text-decoration: none;
+  border: 2px solid #2271D1; /* Bordes blancos */
+  border-radius: 10px; /* Borde redondeado */
+  background-color: #000000E5; /* Fondo transparente */
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0px 0px 12px 4px #2271D1 inset;
+
+}
+
+.nav-button:hover {
+  background-color: #0000007e; /* Fondo blanco al hacer hover */
+  color: #262626; /* Texto oscuro */
+}
+
+.nav-button-1{
+  display: flex;
+justify-content: center;
+align-items: center;
+width: 180px; /* Tamaño consistente */
+height: 54px; /* Tamaño consistente */
+color: white;
+text-decoration: none;
+border: 2px solid white; /* Bordes blancos */
+border-radius: 10px; /* Borde redondeado */
+background-color: transparent; /* Fondo transparente */
+transition: background-color 0.3s, color 0.3s;
+}
