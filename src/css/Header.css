@@ -1,3 +1,4 @@
+/* Estilo del Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -7,17 +8,20 @@
   width: 100vw;
 }
 
+/* Logo */
 .logo {
   height: 40px;
   width: auto;
 }
 
+/* Navegación */
 .nav {
   display: flex;
   gap: 15px;
 }
 
-.nav-button {
+.nav-button,
+.nav-button-1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,29 +29,55 @@
   height: 54px; /* Tamaño consistente */
   color: white;
   text-decoration: none;
-  border: 2px solid #2271D1; /* Bordes blancos */
-  border-radius: 10px; /* Borde redondeado */
-  background-color: #000000E5; /* Fondo transparente */
+  border: 2px solid #2271D1;
+  border-radius: 10px;
+  background-color: #000000E5;
   transition: background-color 0.3s, color 0.3s;
   box-shadow: 0px 0px 12px 4px #2271D1 inset;
-
 }
 
 .nav-button:hover {
-  background-color: #0000007e; /* Fondo blanco al hacer hover */
-  color: #262626; /* Texto oscuro */
+  background-color: #0000007e;
+  color: #262626;
 }
 
-.nav-button-1{
-  display: flex;
-justify-content: center;
-align-items: center;
-width: 180px; /* Tamaño consistente */
-height: 54px; /* Tamaño consistente */
-color: white;
-text-decoration: none;
-border: 2px solid white; /* Bordes blancos */
-border-radius: 10px; /* Borde redondeado */
-background-color: transparent; /* Fondo transparente */
-transition: background-color 0.3s, color 0.3s;
+.nav-button-1 {
+  border-color: white;
+  background-color: transparent;
+}
+
+.nav-button-1:hover {
+  background-color: #ffffff;
+  color: #262626;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+  .logo {
+    display: none; /* Oculta la imagen del logo */
+  }
+
+  .nav-button {
+    width: auto;
+    padding: 10px; /* Ajusta padding */
+    font-size: 0.9rem;
+  }
+
+  .nav-button::before {
+    content: "🏠"; /* Icono de casita */
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+
+  .nav-button-1 {
+    width: auto;
+    padding: 10px; /* Ajusta padding */
+    font-size: 0.9rem;
+  }
+
+  .nav-button-1::before {
+    content: "➕"; /* Icono de más */
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
 }

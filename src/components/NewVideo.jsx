@@ -42,7 +42,8 @@ const NewVideo = ({ addVideo }) => {
 
   return (
     <div className="new-video">
-      <h1>Registrar Nuevo Video</h1>
+      <h2 className='new-video-h2'>NUEVO VIDEO</h2>
+      <h3 className='new-video-h3'>COMPLETE EL FORMULARIO PARA CREAR UNA NUEVA TARJETA DE VIDEO</h3>
       <form className="new-video-form" onSubmit={handleSubmit}>
         <label>
           Título:

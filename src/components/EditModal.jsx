@@ -26,7 +26,7 @@ const EditModal = ({ video, onClose, onEdit }) => {
       body: JSON.stringify(editedVideo),
     })
       .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         onEdit(editedVideo); // Actualizamos el estado en el componente principal
         onClose(); // Cerramos el modal
       })
@@ -49,45 +49,67 @@ const EditModal = ({ video, onClose, onEdit }) => {
   return (
     <div className="modal-overlay">
       <div className="modal modal-show">
-        <h2>Editar Video</h2>
-        <input
-          type="text"
-          name="title"
-          value={editedVideo.title}
-          onChange={handleInputChange}
-          placeholder="Título del video"
-        />
-        <input
-          type="text"
-          name="category"
-          value={editedVideo.category}
-          onChange={handleInputChange}
-          placeholder="Categoría"
-        />
-        <input
-          type="text"
-          name="imageUrl"
-          value={editedVideo.imageUrl}
-          onChange={handleInputChange}
-          placeholder="URL de la imagen"
-        />
-        <input
-          type="text"
-          name="videoUrl"
-          value={editedVideo.videoUrl}
-          onChange={handleInputChange}
-          placeholder="URL del video"
-        />
-        <textarea
-          name="description"
-          value={editedVideo.description}
-          onChange={handleInputChange}
-          placeholder="Descripción del video"
-        />
-        <div>
-          <button onClick={handleSave}>Guardar</button>
-          <button onClick={handleClear}>Limpiar</button>
-          <button className="close" onClick={onClose}>Cerrar</button>
+        <h2>Editar Card</h2>
+        <form className="edit-video-form">
+          <label>
+            Título:
+            <input
+              type="text"
+              name="title"
+              value={editedVideo.title}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Categoría:
+            <select
+              name="category"
+              value={editedVideo.category}
+              onChange={handleInputChange}
+              required
+            >
+              <option value="FRONT END">FRONT END</option>
+              <option value="BACK END">BACK END</option>
+              <option value="INNOVACION Y GESTIÓN">INNOVACION Y GESTIÓN</option>
+            </select>
+          </label>
+          <label>
+            Enlace de la Imagen:
+            <input
+              type="url"
+              name="imageUrl"
+              value={editedVideo.imageUrl}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Enlace del Video:
+            <input
+              type="url"
+              name="videoUrl"
+              value={editedVideo.videoUrl}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Descripción:
+            <textarea
+              name="description"
+              value={editedVideo.description}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </form>
+        <div className="modal-buttons">
+          <button className="save" onClick={handleSave}>Guardar</button>
+          <button className="clean" onClick={handleClear}>Limpiar</button>
+          <button className="close" onClick={onClose}>
+            Cerrar
+          </button>
         </div>
       </div>
     </div>

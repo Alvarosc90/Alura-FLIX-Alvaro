@@ -211,24 +211,41 @@
   .video-footer button {
     margin-bottom: 10px;
   }
+
+  .carousel-btn {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .video-card {
+    width: 90%;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
+  .carousel {
+    overflow-x: scroll; /* Habilitar desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia táctil */
+    padding: 10px 0; /* Espaciado adicional */
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento */
+  }
+
+  .carousel-btn {
+    display: none; /* Ocultar botones de navegación en móviles */
+  }
+
   .video-list {
-    justify-content: center;
+    display: flex;
     gap: 10px;
   }
 
   .video-card {
-    width: 90%; /* Hacemos las tarjetas más grandes */
-    height: 180px; /* Reducimos aún más la altura */
-  }
-
-  .carousel-btn {
-    font-size: 1.5rem;
-  }
-
-  .video-footer button {
-    font-size: 0.8rem; /* Reducimos el tamaño de los íconos */
+    width: 85%; /* Hacer las tarjetas más grandes */
+    height: auto; /* Ajustar automáticamente la altura */
+    flex-shrink: 0; /* Evitar que las tarjetas se encojan */
   }
 }
